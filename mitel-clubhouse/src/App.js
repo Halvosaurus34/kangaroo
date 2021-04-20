@@ -14,17 +14,13 @@ import Hallway from "./components/Hallway.js";
 import NavBar from "./components/NavBar";
 import SingleRoom from "./components/SingleRoom";
 import Profile from "./components/Profile";
-import Welcome from './components/Welcome';
+import Welcome from "./components/Welcome";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useParams,
   Redirect,
 } from "react-router-dom";
-
-import { Button, TextField, Card, CardContent } from "@material-ui/core";
 
 function App() {
   const [state, setState] = useState({
@@ -99,7 +95,7 @@ function App() {
           <Route path="/room/:id">
             <NavBar createRoom={createNewRoom} />
 
-            <SingleRoom leaveRoom={leaveRoom}/>
+            <SingleRoom leaveRoom={leaveRoom} />
             {/* <button onClick={getUserMedia}>Click Me</button> */}
             <video autoPlay playsInline></video>
           </Route>
